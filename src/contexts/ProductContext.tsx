@@ -46,7 +46,7 @@ export const ProductProvider = ({ children }: Props) => {
         const response = await axios.get('/products?limit=20');  // pakai dummyjson API
         setProducts(response.data.products);
         localStorage.setItem("products", JSON.stringify(response.data.products)); // ✅ Simpan ke localStorage
-      } catch (_err) {
+      } catch{
         setError('Failed to load products');
       } finally {
         setLoading(false);

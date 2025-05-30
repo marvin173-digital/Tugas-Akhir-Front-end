@@ -15,6 +15,8 @@ type SortOptions =
   | "stock"
   | "reviews";
 
+  
+
 const ProductPreview = () => {
   const { products, loading, error } = useContext(ProductContext);
   const { addToCart } = useCart();

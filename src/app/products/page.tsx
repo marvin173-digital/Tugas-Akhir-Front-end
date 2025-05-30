@@ -1,9 +1,10 @@
 "use client";
 
 import { useContext, useEffect, useMemo, useState } from "react";
-import { ProductContext, Product } from "@/contexts/ProductContext";
+import { ProductContext} from "@/contexts/ProductContext";
 import { useCart } from "@/contexts/CartContext";
 import ProductCard from "@/components/ProductCard";
+
 
 type SortOptions =
   | "none"
@@ -20,6 +21,17 @@ interface FilterState {
   available: boolean;
   sortBy: SortOptions;
 }
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  thumbnail: string;
+  rating: number;             // harus ada
+  discountPercentage: number; // harus ada
+  stock: number;              // harus ada
+}
+
 
 const ProductPage = () => {
   const { products, loading, error } = useContext(ProductContext);

@@ -31,7 +31,7 @@ const ProductDetailPage = () => {
       try {
         const response = await axios.get(`/products/${id}`);
         setProduct(response.data);
-      } catch (_err) {
+      } catch {
         setError("Failed to load product.");
       } finally {
         setLoading(false);
