@@ -21,17 +21,6 @@ interface FilterState {
   available: boolean;
   sortBy: SortOptions;
 }
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  category: string;
-  thumbnail: string;
-  rating: number;             // harus ada
-  discountPercentage: number; // harus ada
-  stock: number;              // harus ada
-}
-
 
 const ProductPage = () => {
   const { products, loading, error } = useContext(ProductContext);
