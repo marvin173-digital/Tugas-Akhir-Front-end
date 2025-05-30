@@ -10,6 +10,9 @@ interface Product {
   category: string;
   thumbnail: string;
   images: string[];
+  rating: number;
+  stock: number;
+  discountPercentage: number;
 }
 
 interface ProductContextType {

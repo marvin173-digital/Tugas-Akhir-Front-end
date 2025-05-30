@@ -66,10 +66,10 @@ const ProductPreview = () => {
 
     // Filter berdasarkan minPrice dan maxPrice
     if (filter.minPrice !== "") {
-      result = result.filter((p) => p.price >= filter.minPrice);
+      result = result.filter((p) => p.price >= Number(filter.minPrice));
     }
     if (filter.maxPrice !== "") {
-      result = result.filter((p) => p.price <= filter.maxPrice);
+      result = result.filter((p) => p.price <= Number(filter.maxPrice));
     }
 
     // Search
